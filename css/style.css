@@ -61,3 +61,58 @@ html, body {
     text-decoration: underline;
   }
   
+
+
+  /* Navigatiebalk styling */
+.navbar {
+  background-color: #333; /* Zelfde kleur als je footer voor consistentie */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(90deg, orange, black); /* Zelfde effect als in je footer */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Responsive layout voor mobiel */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
