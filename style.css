@@ -12,7 +12,6 @@ body {
     height: 100%;
     background-color: black;
     position: relative;
-    
 }
 
 .video-container {
@@ -294,3 +293,64 @@ footer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 750px; /* Increase form width */
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px; /* Keep padding the same */
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-top: 8px; /* Keep margin compact */
+    color: black;
+    font-size: 25px;
+}
+
+input, textarea {
+    margin-top: 8px;
+    padding: 18px; /* Keep padding unchanged for vertical compactness */
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Fields will take full width of the form */
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 110px; /* Keep textarea height the same */
+}
+
+button {
+    margin-top: 12px;
+    padding: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#confirmationMessage {
+    margin-top: 12px;
+    color: green;
+    text-align: center;
+    font-size: 20px;
+}
+
+form h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 12px;
+    font-size: 35px;
+}
+
