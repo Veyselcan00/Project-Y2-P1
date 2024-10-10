@@ -1,0 +1,159 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>SNEAKERFESS</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="">SNEAKERFESS</a></li>
+                    <li><a href="tickets.html">TICKETS</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+        
+            <main>
+                <div class="video-container">
+                    <video autoplay muted loop id="background-video">
+                        <source src="SNEAKERNESS-Main-Teaser-HP_comp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay"></div>
+                </div>  
+        
+                <div class="wrapper">
+                    <h1>Frequently Asked Questions</h1>
+            
+                    <div class="faq">
+                        <button class="accordion">
+                            Wat is Sneakerfess®?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Sneakerfess® is een tweedaags evenement waar de sneaker-community bij elkaar komt. Het draait om een mix van kunst, sport, mode, muziek en uiteraard sneakers. Het evenement wordt elk jaar in meerdere Europese steden georganiseerd.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Wat zijn de ticketprijzen en hoe werkt het met entreetijden?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                De prijzen variëren afhankelijk van de tijd waarop je toegang wilt krijgen. Als je vroeg naar binnen wilt om de beste sneakers te scoren, betaal je meer. Voor elke entreetijd is er een beperkt aantal tickets beschikbaar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Waar en wanneer vindt Sneakerfess® plaats in Nederland?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Het Sneakerfess® evenement vindt plaats in de Van Nellefabriek in Rotterdam in november. Specifieke data worden gecommuniceerd op de officiële website en social media kanalen.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Hoe kan ik tickets kopen voor het event?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Tickets kun je online kopen via de officiële Sneakerfess® website. Er zijn verschillende tickets beschikbaar afhankelijk van de tijd waarop je het event wilt bezoeken.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Kan ik mijn tickets op de dag van het evenement kopen?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Het wordt aangeraden om je tickets van tevoren online te kopen, omdat het evenement vaak uitverkocht is. Als er nog tickets beschikbaar zijn op de dag zelf, kun je deze mogelijk bij de ingang kopen, maar dit is niet gegarandeerd.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Wat voor type sneakers en merken kan ik verwachten?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Je vindt een brede selectie van exclusieve en limited-edition sneakers van bekende merken zoals Nike, Adidas, New Balance, en meer. Daarnaast zijn er unieke, opkomende merken en custom sneakers te vinden.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion">
+                            Wat kan ik verwachten op het Sneakerfess® event?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="pannel">
+                            <p>
+                                Op het event kun je genieten van een uitgebreide collectie sneakers, deelnemen aan exclusieve ruil- en koopmogelijkheden, kunstinstallaties bewonderen, muziek beluisteren en je onderdompelen in de wereld van sneakers en streetwear-cultuur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+        
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            this.parentElement.classList.toggle("active");
+        
+                            var pannel = this.nextElementSibling;
+                
+                            if (pannel.style.maxHeight) {
+                                pannel.style.maxHeight = null;
+                            } else {
+                                pannel.style.maxHeight = pannel.scrollHeight + "px";
+                            } 
+                        });
+                    }
+                </script>
+            </main>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <h3>Sneaker HUB</h3>
+                        <p>© 2024 Sneaker HUB. All rights reserved.</p>
+                    </div>
+                    <div class="footer-center">
+                        <a href="events.html">Events</a>
+                        <a href="tickets.html">Tickets</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div class="footer-right">
+                        <a href="#"><img src="Facebook_Logo_2023.png" alt="Facebook"></a>
+                        <a href="#"><img src="1691832581twitter-x-icon-png.png" alt="Twitter"></a>
+                        <a href="#"><img src="Instagram-Icon.png" alt="Instagram"></a>
+                        <a href="#"><img src="Linkedin-png-linkedin-icon-1600.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </footer>
+            <script src="script.js"></script>
+        </body>
+        </html>
