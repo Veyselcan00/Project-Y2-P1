@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geen Tickets Beschikbaar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'League Gothic', sans-serif;
+        }
+
+        .notification {
+            background-color: #ffcccc;
+            border: 1px solid #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px; /* ruimte rond de melding */
+        }
+
+        .notification h2 {
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+
+        .redirect {
+            margin-top: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #c59702;
+        }
+
+        .redirect:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification">
+        <h2>Geen tickets beschikbaar</h2>
+        <p>Geen tickets beschikbaar voor dit evenement.</p>
+        <p>Je wordt binnen enkele seconden teruggestuurd naar de evenementenpagina.</p>
+    </div>
+
+    <script>
+        // Wacht 3 seconden en stuur de gebruiker terug naar de evenementenpagina
+        setTimeout(function() {
+            window.location.href = "events.html"; // Verwijs naar je evenementenpagina
+        }, 3000);  // 3000 milliseconden = 3 seconden
+    </script>
+
+</body>
+</html>
