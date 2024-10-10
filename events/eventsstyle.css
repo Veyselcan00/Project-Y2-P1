@@ -1,0 +1,113 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'League Gothic', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.navbar {
+    background-color: #c59702;
+    padding: 10px 0;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 100; 
+    height: 60px; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    position: relative;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+    transition: color 0.3s ease;
+}
+
+.navbar li:nth-child(3) a {
+    background-color: #b38d05;
+    padding: 15px 30px;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.navbar li:not(:nth-child(3)) {
+    margin: 0 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.image-grid a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-grid a:hover img {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
