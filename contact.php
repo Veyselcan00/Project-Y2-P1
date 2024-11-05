@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
     <link rel="stylesheet" href="style.css">
     <script>
-        /
+        
         function limitTextInput() {
             var messageField = document.getElementById("message");
             var maxLength = 250;

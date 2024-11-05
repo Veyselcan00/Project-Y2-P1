@@ -6,7 +6,7 @@
     <title>SNEAKERFESS</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
     <link rel="stylesheet" href="ticket.css">
-    <link rel="stylesheet" href="tickets.css"> <!-- Link to tickets.css -->
+    
 </head>
 <body>
     <div class="video-container">
@@ -30,17 +30,17 @@
         <div class="cards">
             <div class="card">
                 <div class="image-container">
-                    <img src="image.png" alt="Descriptive Alt Text for Image 1">
+                    <img src="/events/eventsimages/BERLIJN.png" alt="Descriptive Alt Text for Image 1">
                 </div>
             </div>
             <div class="card">
                 <div class="image-container">
-                    <img src="image1.png" alt="Descriptive Alt Text for Image 2">
+                    <img src="/events/eventsimages/image.png" alt="Descriptive Alt Text for Image 2">
                 </div>
             </div>
             <div class="card">
                 <div class="image-container">
-                    <img src="image2.png" alt="Descriptive Alt Text for Image 3">
+                    <img src="/events/eventsimages/MADRID.png" alt="Descriptive Alt Text for Image 3">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2></h2>
-        <form id="ticket-form" action="reserve.php" method="POST">
+        <form id="ticket-form" action="process_ticket.php" method="POST">
             <label for="name">Naam:</label>
             <input type="text" id="name" name="name" required>
             
@@ -93,10 +93,9 @@
                 <p>© 2024 Sneaker HUB. All rights reserved.</p>
             </div>
             <div class="footer-center">
-                <a href="events.html">Events</a>
+                <a href="./events/events.html">Events</a>
                 <a href="tickets.html">Tickets</a>
                 <a href="faq.html">FAQ</a>
-                <a href="contact.php">Contact</a>
             </div>
             <div class="footer-right">
                 <a href="#"><img src="Facebook_Logo_2023.png" alt="Facebook"></a>

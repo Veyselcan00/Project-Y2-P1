@@ -3,6 +3,8 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'League Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de body verticaal wordt georganiseerd */
 }
 
 * {
@@ -12,13 +14,10 @@ html, body {
 }
 
 body {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
+    flex-grow: 1; /* Laat de body zich uitbreiden */
 }
+
 .navbar {
     background-color: #c59702;
     padding: 10px 0;
@@ -67,51 +66,30 @@ body {
     margin: 0 20px;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+.header {
+    text-align: left;             
+    margin-top: 80px;             
+    margin-bottom: 20px;          
+    padding-left: 20px;            
 }
 
-.image-grid a {
-    position: relative;
-    text-decoration: none;
-    color: black;
+.header h2 {
+    font-size: 55px;               
+    font-weight: bold;            
+    color: #333;                  
 }
-
-.image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-grid a:hover img {
-    transform: scale(1.05);
-}
-
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
 
 .eventsgrid {
     display: grid;                
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px 80px;                  
     justify-content: center;      
-    margin-top: 50px;             
+    margin: 0 auto;               
+    padding: 0 20px; /* Voeg wat padding toe voor ruimte aan de zijkanten */
 }
 
-
 .eventsgrid img {
-    width: 500px;               
+    width: 500px;                
     height: auto;                 
     object-fit: cover;  
     transition: transform 0.8s ease;         
@@ -120,26 +98,13 @@ body {
 .eventsgrid img:hover {
     transform: scale(1.2);        
 }
-.header {
-    text-align: left;             
-    margin-bottom: -3rem;     
-    margin-right: 10rem;      
-}
-
-.header h2 {
-    font-size: 100px;              
-    color: #333;                  
-              
-}
 
 footer {
-    margin-top: 0; 
+    margin-top: auto; /* Zorgt ervoor dat de footer onderaan blijft */
     width: 100%;
-    position: relative;
     padding: 20px 0; 
     background-color: #333;
     color: #f1f1f1;
-    z-index: 10; 
 }
 
 .footer-container {
@@ -187,14 +152,3 @@ footer {
 .footer-right img:hover {
     transform: scale(1.1);
 }
-
-
-
-
-
-
-
-
-
-
-
