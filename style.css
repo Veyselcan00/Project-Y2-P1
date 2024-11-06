@@ -1,35 +1,46 @@
+/* Algemene instellingen */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'League Gothic', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100%;
     background-color: black;
     position: relative;
 }
 
+/* Video achtergrond */
 .video-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 60px); 
+    height: calc(100% - 60px);
     overflow: hidden;
-    z-index: -10; 
+    z-index: -10;
 }
 
 #background-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw; 
-    height: 200vh; 
+    width: 100vw;
+    height: 200vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
 }
@@ -39,34 +50,27 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 60px); 
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: -9; 
+    height: calc(100% - 60px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -9;
 }
 
-main {
-    flex-grow: 1; 
-    position: relative;
-    z-index: 1; 
-    margin-top: 60px; 
-}
-
+/* Navbar */
 .navbar {
     background-color: #c59702;
     padding: 10px 0;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 100; 
-    height: 60px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 60px;
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    position: relative;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navbar li {
@@ -92,31 +96,29 @@ main {
     position: absolute;
     top: 4px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
-.navbar li:not(:nth-child(3)) {
-    margin: 0 20px;
-}
-
+/* Wrapper en content layout */
 .wrapper {
     max-width: 75%;
     margin: auto;
-    z-index: 1; 
+    z-index: 1;
 }
-  
+
 .wrapper > p,
 .wrapper > h1 {
     margin: 1.5rem 0;
     text-align: center;
 }
-  
+
 .wrapper > h1 {
     margin-top: 75px;
     color: white;
     letter-spacing: 3px;
 }
-  
+
+/* FAQ-styling */
 .accordion {
     background-color: white;
     color: rgba(0, 0, 0, 0.8);
@@ -132,15 +134,16 @@ main {
     align-items: center;
     font-weight: bold;
 }
-  
+
 .accordion i {
     font-size: 1.6rem;
 }
-  
+
 .active,
 .accordion:hover {
     background-color: #f1f7f5;
 }
+
 .pannel {
     padding: 0 2rem;
     background-color: #f1f7f5;
@@ -154,23 +157,25 @@ main {
     font-size: 1.2rem;
     line-height: 1.4;
 }
-  
+
 .faq {
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin: 10px 0;
 }
+
 .faq.active {
     border: none;
 }
 
+/* Footer */
 footer {
-    margin-top: 0; 
+    margin-top: 0;
     width: 100%;
     position: relative;
-    padding: 20px 0; 
+    padding: 20px 0;
     background-color: #333;
     color: #f1f1f1;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .footer-container {
@@ -180,25 +185,25 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
 .footer-left h3 {
     margin: 0;
-    font-size: 2rem; 
+    font-size: 2rem;
     color: #f39c12;
 }
 
 .footer-left p {
     margin: 5px 0;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
 }
 
 .footer-center a {
     margin: 0 15px;
     color: #f1f1f1;
     text-decoration: none;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 .footer-center a:hover {
@@ -206,12 +211,8 @@ footer {
     text-decoration: underline;
 }
 
-.footer-right a {
-    margin-left: 15px;
-}
-
 .footer-right img {
-    height: 40px; 
+    height: 40px;
     transition: transform 0.3s;
 }
 
@@ -219,30 +220,78 @@ footer {
     transform: scale(1.1);
 }
 
-.box {
-    position: absolute;
-    left: 8rem;
-    top: 25%;
-    transform: translateY(-50%);
-    background-color: white;
-    padding: 20px;
-    margin: 30px;
-    color: black;
-    font-family: 'League Gothic', sans-serif;
+/* Login Container */
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 400px;
+    max-width: 90%;
 }
 
-.box h1 {
-    font-size: 3rem;
-    color: #c59702; 
-    margin: 0;
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
+form input,
+form button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Loader */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Special Effects */
 .next-event {
     position: absolute;
     left: 0%;
     transform: translateX(-50%);
-    top: calc(100% + 10px); 
+    top: calc(100% + 10px);
     font-size: 2.5rem;
     color: white;
     animation: shake 0.5s infinite;
@@ -255,102 +304,3 @@ footer {
     75% { transform: translateY(5px); }
     100% { transform: translateY(0); }
 }
-.sponsors {
-    position: relative; 
-    z-index: 3; 
-    display: block; 
-    margin: 0 auto; 
-    max-width: 100%; 
-    padding-bottom: 0; 
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Zorg ervoor dat de container de volledige hoogte van het scherm inneemt */
-    position: relative;
-}
-
-.centered {
-    text-align: center;
-    font-size: 2rem; /* Pas de lettergrootte aan naar wens */
-    color: white; /* Pas de tekstkleur aan naar wens */
-    margin-bottom: 20px; /* Voeg wat ruimte toe tussen de tekst en de loader */
-}
-
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 750px; /* Increase form width */
-    margin: 0 auto;
-    background-color: white;
-    padding: 15px; /* Keep padding the same */
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    margin-top: 8px; /* Keep margin compact */
-    color: black;
-    font-size: 25px;
-}
-
-input, textarea {
-    margin-top: 8px;
-    padding: 18px; /* Keep padding unchanged for vertical compactness */
-    font-size: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; /* Fields will take full width of the form */
-    box-sizing: border-box;
-}
-
-textarea {
-    height: 110px; /* Keep textarea height the same */
-}
-
-button {
-    margin-top: 12px;
-    padding: 18px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-#confirmationMessage {
-    margin-top: 12px;
-    color: green;
-    text-align: center;
-    font-size: 20px;
-}
-
-form h1 {
-    text-align: center;
-    color: black;
-    margin-bottom: 12px;
-    font-size: 35px;
-}
-

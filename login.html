@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNEAKERFESS - Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="./events/events.html">EVENTS</a></li>
+            <li><a href="">SNEAKERFESS</a></li>
+            <li><a href="tickets.html">TICKETS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h2>Login to SNEAKERFESS</h2>
+        
+        <!-- Google Sign-In button -->
+        <div id="g_id_onload"
+             data-client_id="255120161695-olmr5pg28kecp7mm9tg956j3155b68ua.apps.googleusercontent.com"
+             data-login_uri="http://localhost/login"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+
+        <!-- Traditionele inlog -->
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Wachtwoord vergeten -->
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <!-- Profile Information Display -->
+        <div id="profile" style="display: none; margin-top: 20px;">
+            <h3>Welcome, <span id="username"></span>!</h3>
+            <img id="userimage" src="" alt="User Image" style="width: 50px; border-radius: 50%;">
+            <button onclick="signOut()">Sign Out</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Algemene body stijlen */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container die de boodschap bevat */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Box waarin de foutmelding wordt getoond */
+.message-box {
+    background-color: #fff;
+    border: 2px solid #e6e6e6;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Titel van de foutmelding */
+.message-box h1 {
+    color: #ff4d4d;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* Paragraaf tekst */
+.message-box p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Extra styling voor de tekst die aangeeft dat de gebruiker automatisch wordt doorgestuurd */
+.message-box p:last-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff7700;
+}
